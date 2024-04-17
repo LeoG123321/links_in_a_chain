@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include "ChainLink.h"
+#include "Node.h"
 
 using namespace std;
 
+void append_node(ChainLink chain);
+
+Node* head;
+Node* tail;
+
 int main()
 {
+	
+}
 
+void append_node(ChainLink chain) {
+	Node* new_node = new Node(chain);
 }

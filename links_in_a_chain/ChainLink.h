@@ -9,7 +9,9 @@ public:
     ChainLink(string color) {
         this->color = color;
     }
-
+    ChainLink() {
+        return;
+    }
     string get_color() {
         return this->color;
     }

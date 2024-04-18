@@ -1,5 +1,8 @@
-// links_in_a_chain.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+	Leonardo Gonzalez	4/16/2024
+
+	Week 14				Links in a Chain
+*/
 
 #include <iostream>
 #include "Node.h"

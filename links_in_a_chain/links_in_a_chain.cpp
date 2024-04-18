@@ -11,6 +11,7 @@ using namespace std;
 
 void append_node(string color);
 string data_at_index(int index);
+void display_all_data();
 
 Node* head;
 Node* tail;
@@ -50,6 +51,8 @@ int main()
 	cout << data_at_index(4) << endl;
 	cout << data_at_index(5) << endl;
 	cout << data_at_index(6) << endl;
+
+	display_all_data();
 }
 
 void append_node(string color) {
@@ -68,4 +71,13 @@ string data_at_index(int index) {
 		node = node->next_node;
 	}
 	return node->chain.get_color();
+}
+
+void display_all_data() {
+	cout << endl << "Displaying All Data:" << endl;
+	Node* node = head;
+	for (int i = 0; i < node_size; i++) {
+		cout << node->chain.get_color() << endl;
+		node = node->next_node;
+	}
 }

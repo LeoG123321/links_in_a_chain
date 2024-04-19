@@ -7,8 +7,7 @@ class Node
 public:
 	ChainLink chain;
 	Node* next_node = NULL;
-	Node(string color) {
-		ChainLink place_holder(color);
-		chain = place_holder;
+	Node(ChainLink chain) {
+		this->chain = chain;
 	}
 };

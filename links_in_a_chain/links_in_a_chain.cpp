@@ -9,9 +9,10 @@
 
 using namespace std;
 
-void append_node(string color);
+void append_node(ChainLink chain);
 string data_at_index(int index);
 void display_all_data();
+ChainLink create_chain(string color);
 
 Node* head;
 Node* tail;
@@ -19,17 +20,17 @@ int node_size = 0;
 
 int main()
 {
-	head = new Node("Red");
+	head = new Node(create_chain("Red"));
 	tail = head;
 	node_size++;
 
 	cout << node_size << endl;
 
-	append_node("Orange");
-	append_node("Yellow");
-	append_node("Green");
-	append_node("Blue");
-	append_node("Purple");
+	append_node(create_chain("Orange"));
+	append_node(create_chain("Yellow"));
+	append_node(create_chain("Green"));
+	append_node(create_chain("Blue"));
+	append_node(create_chain("Purple"));
 
 	cout << node_size << endl;
 
@@ -55,8 +56,8 @@ int main()
 	display_all_data();
 }
 
-void append_node(string color) {
-	Node* new_node = new Node(color);
+void append_node(ChainLink chain) {
+	Node* new_node = new Node(chain);
 	tail->next_node = new_node;
 	tail = new_node;
 	node_size++;
@@ -80,4 +81,9 @@ void display_all_data() {
 		cout << node->chain.get_color() << endl;
 		node = node->next_node;
 	}
+}
+
+ChainLink create_chain(string color) {
+	ChainLink place_holder(color);
+	return place_holder;
 }

@@ -7,7 +7,5 @@ class Node
 public:
 	ChainLink chain;
 	Node* next_node = NULL;
-	Node(ChainLink chain) {
-		this->chain = chain;
-	}
+	Node(ChainLink chain);
 };

@@ -51,6 +51,8 @@ int main()
 	cout << data_at_index(3) << endl;
 	cout << data_at_index(4) << endl;
 	cout << data_at_index(5) << endl;
+	
+	//Expected Index Fail
 	cout << data_at_index(6) << endl;
 
 	display_all_data();
